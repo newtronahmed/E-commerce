@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card,CardMedia,CardContent,CardActions,Typography,IconButton} from '@material-ui/core'
+import {Card,CardMedia,CardContent,CardActions,Typography,IconButton,Grow} from '@material-ui/core'
 import AddShoppingCart from '@material-ui/icons/AddShoppingCart'
 import useStyles from './style'
 // import image from '../../images/22815393.jpg'
@@ -9,6 +9,7 @@ const Product = ({product,addToCart}) => {
     
     const classes = useStyles()
     return (
+        <Grow mouseEnter >
         <Card className={classes.root}>
             <CardMedia image={product.media.source} className={classes.media} title={product.name}/>
             <CardContent>
@@ -28,6 +29,7 @@ const Product = ({product,addToCart}) => {
                 </IconButton>
             </CardActions>
         </Card>
+        </Grow>
     )
 }
 
