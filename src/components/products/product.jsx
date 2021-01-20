@@ -9,7 +9,7 @@ const Product = ({product,addToCart}) => {
     
     const classes = useStyles()
     return (
-        <Grow mouseEnter >
+        <Grow in={true} >
         <Card className={classes.root}>
             <CardMedia image={product.media.source} className={classes.media} title={product.name}/>
             <CardContent>
